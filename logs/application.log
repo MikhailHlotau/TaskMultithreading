@@ -1,0 +1,129 @@
+15:30:00.808 [pool-1-thread-3] INFO  glotov.multithreading.entity.Ship - Ship 276 docked at the port.
+15:30:00.808 [pool-1-thread-1] INFO  glotov.multithreading.entity.Ship - Ship 5119 docked at the port.
+15:30:00.808 [pool-1-thread-2] INFO  glotov.multithreading.entity.Ship - Ship 9072 docked at the port.
+15:30:00.814 [pool-1-thread-2] INFO  glotov.multithreading.entity.Ship - Get activity for ship 9072: UNLOAD
+15:30:00.814 [pool-1-thread-1] INFO  glotov.multithreading.entity.Ship - Get activity for ship 5119: LOAD
+15:30:00.814 [pool-1-thread-3] INFO  glotov.multithreading.entity.Ship - Get activity for ship 276: LOAD
+15:30:00.840 [pool-1-thread-1] INFO  glotov.multithreading.entity.Ship - Ship 5119left the port. Current load: 1461
+15:30:00.841 [pool-1-thread-1] INFO  glotov.multithreading.entity.Ship - Ship 6726 docked at the port.
+15:30:00.841 [pool-1-thread-1] INFO  glotov.multithreading.entity.Ship - Get activity for ship 6726: LOAD
+15:30:00.988 [pool-1-thread-3] INFO  glotov.multithreading.entity.Ship - Ship 276left the port. Current load: 480
+15:30:00.988 [pool-1-thread-3] INFO  glotov.multithreading.entity.Ship - Ship 5383 docked at the port.
+15:30:00.988 [pool-1-thread-3] INFO  glotov.multithreading.entity.Ship - Get activity for ship 5383: UNLOAD_AND_LOAD
+15:30:01.158 [pool-1-thread-1] INFO  glotov.multithreading.entity.Ship - Ship 6726left the port. Current load: 333
+15:30:01.158 [pool-1-thread-1] INFO  glotov.multithreading.entity.Ship - Ship 5426 docked at the port.
+15:30:01.158 [pool-1-thread-1] INFO  glotov.multithreading.entity.Ship - Get activity for ship 5426: LOAD
+15:30:01.167 [pool-1-thread-2] INFO  glotov.multithreading.entity.Ship - Ship 9072left the port. Current load: 121
+15:30:01.167 [pool-1-thread-2] INFO  glotov.multithreading.entity.Ship - Ship 3720 docked at the port.
+15:30:01.167 [pool-1-thread-2] INFO  glotov.multithreading.entity.Ship - Get activity for ship 3720: LOAD
+15:30:01.278 [pool-1-thread-3] INFO  glotov.multithreading.entity.Ship - Ship 5383left the port. Current load: 1441
+15:30:01.278 [pool-1-thread-3] INFO  glotov.multithreading.entity.Ship - Ship 9158 docked at the port.
+15:30:01.278 [pool-1-thread-3] INFO  glotov.multithreading.entity.Ship - Get activity for ship 9158: UNLOAD
+15:30:01.304 [pool-1-thread-1] INFO  glotov.multithreading.entity.Ship - Ship 5426left the port. Current load: 589
+15:30:01.304 [pool-1-thread-1] INFO  glotov.multithreading.entity.Ship - Ship 5543 docked at the port.
+15:30:01.304 [pool-1-thread-1] INFO  glotov.multithreading.entity.Ship - Get activity for ship 5543: LOAD
+15:30:01.896 [pool-1-thread-2] INFO  glotov.multithreading.entity.Ship - Ship 3720left the port. Current load: 820
+15:30:01.896 [pool-1-thread-2] INFO  glotov.multithreading.entity.Ship - Ship 1245 docked at the port.
+15:30:01.896 [pool-1-thread-2] INFO  glotov.multithreading.entity.Ship - Get activity for ship 1245: LOAD
+15:30:02.077 [pool-1-thread-1] INFO  glotov.multithreading.entity.Ship - Ship 5543left the port. Current load: 747
+15:30:02.126 [pool-1-thread-2] INFO  glotov.multithreading.entity.Ship - Ship 1245left the port. Current load: 295
+15:30:02.130 [pool-1-thread-3] INFO  glotov.multithreading.entity.Ship - Ship 9158left the port. Current load: 4
+15:55:23.810 [pool-2-thread-1] INFO  glotov.multithreading.entity.Ship - Ship 8699 docked at the port.
+15:55:23.810 [pool-2-thread-2] INFO  glotov.multithreading.entity.Ship - Ship 9167 docked at the port.
+15:55:23.810 [pool-2-thread-3] INFO  glotov.multithreading.entity.Ship - Ship 4455 docked at the port.
+15:55:23.821 [pool-2-thread-1] INFO  glotov.multithreading.entity.Ship - Get activity for ship 8699: UNLOAD_AND_LOAD
+15:55:23.822 [pool-2-thread-2] INFO  glotov.multithreading.entity.Ship - Get activity for ship 9167: UNLOAD
+15:55:23.821 [pool-2-thread-3] INFO  glotov.multithreading.entity.Ship - Get activity for ship 4455: UNLOAD_AND_LOAD
+15:55:23.825 [pool-2-thread-3] INFO  glotov.multithreading.entity.Port - Unloaded from ship 4455: 270 containers. Available containers: 3270
+15:55:23.825 [pool-2-thread-2] INFO  glotov.multithreading.entity.Port - Unloaded from ship 9167: 10 containers. Available containers: 3314
+15:55:23.825 [pool-2-thread-1] INFO  glotov.multithreading.entity.Port - Unloaded from ship 8699: 34 containers. Available containers: 3304
+15:55:23.825 [pool-2-thread-3] INFO  glotov.multithreading.entity.Port - Loaded to ship 4455: 90 containers. Available containers: 3224
+15:55:23.825 [pool-2-thread-1] INFO  glotov.multithreading.entity.Port - Loaded to ship 8699: 58 containers. Available containers: 3166
+15:55:23.981 [pool-2-thread-1] INFO  glotov.multithreading.entity.Ship - Ship 8699left the port. Current load: 474
+15:55:23.981 [pool-2-thread-1] INFO  glotov.multithreading.entity.Ship - Ship 886 docked at the port.
+15:55:23.982 [pool-2-thread-1] INFO  glotov.multithreading.entity.Ship - Get activity for ship 886: UNLOAD_AND_LOAD
+15:55:23.982 [pool-2-thread-1] INFO  glotov.multithreading.entity.Port - Unloaded from ship 886: 68 containers. Available containers: 3234
+15:55:23.982 [pool-2-thread-1] INFO  glotov.multithreading.entity.Port - Loaded to ship 886: 166 containers. Available containers: 3068
+15:55:24.081 [pool-2-thread-2] INFO  glotov.multithreading.entity.Ship - Ship 9167left the port. Current load: 3
+15:55:24.081 [pool-2-thread-2] INFO  glotov.multithreading.entity.Ship - Ship 4414 docked at the port.
+15:55:24.081 [pool-2-thread-2] INFO  glotov.multithreading.entity.Ship - Get activity for ship 4414: UNLOAD
+15:55:24.081 [pool-2-thread-2] INFO  glotov.multithreading.entity.Port - Unloaded from ship 4414: 269 containers. Available containers: 3337
+15:55:24.280 [pool-2-thread-1] INFO  glotov.multithreading.entity.Ship - Ship 886left the port. Current load: 448
+15:55:24.280 [pool-2-thread-1] INFO  glotov.multithreading.entity.Ship - Ship 1826 docked at the port.
+15:55:24.280 [pool-2-thread-1] INFO  glotov.multithreading.entity.Ship - Get activity for ship 1826: UNLOAD
+15:55:24.280 [pool-2-thread-1] INFO  glotov.multithreading.entity.Port - Unloaded from ship 1826: 207 containers. Available containers: 3544
+15:55:24.651 [pool-2-thread-2] INFO  glotov.multithreading.entity.Ship - Ship 4414left the port. Current load: 406
+15:55:24.651 [pool-2-thread-2] INFO  glotov.multithreading.entity.Ship - Ship 9105 docked at the port.
+15:55:24.651 [pool-2-thread-2] INFO  glotov.multithreading.entity.Ship - Get activity for ship 9105: LOAD
+15:55:24.651 [pool-2-thread-2] INFO  glotov.multithreading.entity.Port - Loaded to ship 9105: 234 containers. Available containers: 3310
+15:55:24.717 [pool-2-thread-3] INFO  glotov.multithreading.entity.Ship - Ship 4455left the port. Current load: 677
+15:55:24.717 [pool-2-thread-3] INFO  glotov.multithreading.entity.Ship - Ship 3093 docked at the port.
+15:55:24.717 [pool-2-thread-3] INFO  glotov.multithreading.entity.Ship - Get activity for ship 3093: LOAD
+15:55:24.717 [pool-2-thread-3] INFO  glotov.multithreading.entity.Port - Loaded to ship 3093: 290 containers. Available containers: 3020
+15:55:25.111 [pool-2-thread-3] INFO  glotov.multithreading.entity.Ship - Ship 3093left the port. Current load: 340
+15:55:25.111 [pool-2-thread-3] INFO  glotov.multithreading.entity.Ship - Ship 8236 docked at the port.
+15:55:25.111 [pool-2-thread-3] INFO  glotov.multithreading.entity.Ship - Get activity for ship 8236: UNLOAD_AND_LOAD
+15:55:25.112 [pool-2-thread-3] INFO  glotov.multithreading.entity.Port - Unloaded from ship 8236: 13 containers. Available containers: 3033
+15:55:25.112 [pool-2-thread-3] INFO  glotov.multithreading.entity.Port - Loaded to ship 8236: 426 containers. Available containers: 2607
+15:55:25.242 [pool-2-thread-1] INFO  glotov.multithreading.entity.Ship - Ship 1826left the port. Current load: 478
+15:55:25.242 [pool-2-thread-1] INFO  glotov.multithreading.entity.Ship - Ship 4605 docked at the port.
+15:55:25.242 [pool-2-thread-1] INFO  glotov.multithreading.entity.Ship - Get activity for ship 4605: UNLOAD_AND_LOAD
+15:55:25.243 [pool-2-thread-1] INFO  glotov.multithreading.entity.Port - Unloaded from ship 4605: 544 containers. Available containers: 3151
+15:55:25.243 [pool-2-thread-1] INFO  glotov.multithreading.entity.Port - Loaded to ship 4605: 0 containers. Available containers: 3151
+15:55:25.611 [pool-2-thread-2] INFO  glotov.multithreading.entity.Ship - Ship 9105left the port. Current load: 909
+15:55:25.700 [pool-2-thread-1] INFO  glotov.multithreading.entity.Ship - Ship 4605left the port. Current load: 404
+15:55:25.822 [pool-2-thread-3] INFO  glotov.multithreading.entity.Ship - Ship 8236left the port. Current load: 825
+16:06:01.999 [main] INFO  glotov.multithreading.factory.ShipFactory - Creating ship with ID: 7043
+16:06:02.013 [main] INFO  glotov.multithreading.factory.ShipFactory - Creating ship with ID: 1393
+16:06:02.014 [main] INFO  glotov.multithreading.factory.ShipFactory - Creating ship with ID: 9861
+16:06:02.015 [main] INFO  glotov.multithreading.factory.ShipFactory - Creating ship with ID: 1482
+16:06:02.016 [main] INFO  glotov.multithreading.factory.ShipFactory - Creating ship with ID: 1673
+16:06:02.016 [main] INFO  glotov.multithreading.factory.ShipFactory - Creating ship with ID: 8535
+16:06:02.017 [main] INFO  glotov.multithreading.factory.ShipFactory - Creating ship with ID: 6655
+16:06:02.017 [main] INFO  glotov.multithreading.factory.ShipFactory - Creating ship with ID: 5326
+16:06:02.017 [main] INFO  glotov.multithreading.factory.ShipFactory - Creating ship with ID: 4577
+16:06:02.018 [main] INFO  glotov.multithreading.factory.ShipFactory - Creating ship with ID: 4256
+16:06:02.019 [pool-2-thread-3] INFO  glotov.multithreading.entity.Ship - Ship 9861 docked at the port.
+16:06:02.019 [pool-2-thread-1] INFO  glotov.multithreading.entity.Ship - Ship 7043 docked at the port.
+16:06:02.019 [pool-2-thread-2] INFO  glotov.multithreading.entity.Ship - Ship 1393 docked at the port.
+16:06:02.030 [pool-2-thread-3] INFO  glotov.multithreading.entity.Ship - Get activity for ship 9861: UNLOAD_AND_LOAD
+16:06:02.030 [pool-2-thread-1] INFO  glotov.multithreading.entity.Ship - Get activity for ship 7043: UNLOAD_AND_LOAD
+16:06:02.032 [pool-2-thread-2] INFO  glotov.multithreading.entity.Ship - Get activity for ship 1393: LOAD
+16:06:02.045 [pool-2-thread-3] INFO  glotov.multithreading.entity.Port - Unloaded from ship 9861: 256 containers. Available containers: 3256
+16:06:02.045 [pool-2-thread-2] INFO  glotov.multithreading.entity.Port - Loaded to ship 1393: 55 containers. Available containers: 3431
+16:06:02.046 [pool-2-thread-3] INFO  glotov.multithreading.entity.Port - Loaded to ship 9861: 364 containers. Available containers: 3067
+16:06:02.045 [pool-2-thread-1] INFO  glotov.multithreading.entity.Port - Unloaded from ship 7043: 230 containers. Available containers: 3486
+16:06:02.046 [pool-2-thread-1] INFO  glotov.multithreading.entity.Port - Loaded to ship 7043: 348 containers. Available containers: 2719
+16:06:02.133 [pool-2-thread-3] INFO  glotov.multithreading.entity.Ship - Ship 9861left the port. Current load: 418
+16:06:02.134 [pool-2-thread-3] INFO  glotov.multithreading.entity.Ship - Ship 1482 docked at the port.
+16:06:02.134 [pool-2-thread-3] INFO  glotov.multithreading.entity.Ship - Get activity for ship 1482: LOAD
+16:06:02.135 [pool-2-thread-3] INFO  glotov.multithreading.entity.Port - Loaded to ship 1482: 39 containers. Available containers: 2680
+16:06:02.195 [pool-2-thread-2] INFO  glotov.multithreading.entity.Ship - Ship 1393left the port. Current load: 771
+16:06:02.195 [pool-2-thread-2] INFO  glotov.multithreading.entity.Ship - Ship 1673 docked at the port.
+16:06:02.196 [pool-2-thread-2] INFO  glotov.multithreading.entity.Ship - Get activity for ship 1673: UNLOAD_AND_LOAD
+16:06:02.196 [pool-2-thread-2] INFO  glotov.multithreading.entity.Port - Unloaded from ship 1673: 716 containers. Available containers: 3396
+16:06:02.196 [pool-2-thread-2] INFO  glotov.multithreading.entity.Port - Loaded to ship 1673: 1340 containers. Available containers: 2056
+16:06:02.338 [pool-2-thread-2] INFO  glotov.multithreading.entity.Ship - Ship 1673left the port. Current load: 1431
+16:06:02.338 [pool-2-thread-2] INFO  glotov.multithreading.entity.Ship - Ship 8535 docked at the port.
+16:06:02.339 [pool-2-thread-2] INFO  glotov.multithreading.entity.Ship - Get activity for ship 8535: UNLOAD
+16:06:02.340 [pool-2-thread-2] INFO  glotov.multithreading.entity.Port - Unloaded from ship 8535: 346 containers. Available containers: 2402
+16:06:02.609 [pool-2-thread-1] INFO  glotov.multithreading.entity.Ship - Ship 7043left the port. Current load: 892
+16:06:02.610 [pool-2-thread-1] INFO  glotov.multithreading.entity.Ship - Ship 6655 docked at the port.
+16:06:02.610 [pool-2-thread-1] INFO  glotov.multithreading.entity.Ship - Get activity for ship 6655: LOAD
+16:06:02.611 [pool-2-thread-1] INFO  glotov.multithreading.entity.Port - Loaded to ship 6655: 140 containers. Available containers: 2262
+16:06:02.986 [pool-2-thread-1] INFO  glotov.multithreading.entity.Ship - Ship 6655left the port. Current load: 337
+16:06:02.986 [pool-2-thread-1] INFO  glotov.multithreading.entity.Ship - Ship 5326 docked at the port.
+16:06:02.986 [pool-2-thread-1] INFO  glotov.multithreading.entity.Ship - Get activity for ship 5326: UNLOAD
+16:06:02.987 [pool-2-thread-1] INFO  glotov.multithreading.entity.Port - Unloaded from ship 5326: 856 containers. Available containers: 3118
+16:06:03.088 [pool-2-thread-3] INFO  glotov.multithreading.entity.Ship - Ship 1482left the port. Current load: 40
+16:06:03.088 [pool-2-thread-3] INFO  glotov.multithreading.entity.Ship - Ship 4577 docked at the port.
+16:06:03.089 [pool-2-thread-3] INFO  glotov.multithreading.entity.Ship - Get activity for ship 4577: UNLOAD
+16:06:03.089 [pool-2-thread-3] INFO  glotov.multithreading.entity.Port - Unloaded from ship 4577: 608 containers. Available containers: 3726
+16:06:03.234 [pool-2-thread-2] INFO  glotov.multithreading.entity.Ship - Ship 8535left the port. Current load: 115
+16:06:03.234 [pool-2-thread-2] INFO  glotov.multithreading.entity.Ship - Ship 4256 docked at the port.
+16:06:03.235 [pool-2-thread-2] INFO  glotov.multithreading.entity.Ship - Get activity for ship 4256: UNLOAD_AND_LOAD
+16:06:03.235 [pool-2-thread-2] INFO  glotov.multithreading.entity.Port - Unloaded from ship 4256: 42 containers. Available containers: 3768
+16:06:03.235 [pool-2-thread-2] INFO  glotov.multithreading.entity.Port - Loaded to ship 4256: 256 containers. Available containers: 3512
+16:06:03.238 [pool-2-thread-2] INFO  glotov.multithreading.entity.Ship - Ship 4256left the port. Current load: 261
+16:06:03.822 [pool-2-thread-3] INFO  glotov.multithreading.entity.Ship - Ship 4577left the port. Current load: 67
+16:06:03.915 [pool-2-thread-1] INFO  glotov.multithreading.entity.Ship - Ship 5326left the port. Current load: 103
