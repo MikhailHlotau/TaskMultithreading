@@ -5,6 +5,7 @@ import glotov.multithreading.entity.Ship;
 import java.util.HashSet;
 import java.util.Random;
 import java.util.Set;
+import java.util.UUID;
 import glotov.multithreading.exception.CustomException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -12,30 +13,25 @@ import org.apache.logging.log4j.Logger;
 public class ShipFactory {
     private static final Logger logger = LogManager.getLogger(ShipFactory.class);
     private static final Random random = new Random();
-    private static final Set<Integer> usedIds = new HashSet<>();
+    private static final Set<UUID> usedIds = new HashSet<UUID>();
 
-    public static Ship createShip(int id, Port port) throws CustomException {
+    public static Ship createShip(UUID id, Port port) {
         int capacity = getRandomCapacity();
         int currentLoad = random.nextInt(capacity + 1);
-        logger.info("Creating ship with ID: " + id);
-        try {
-            return new Ship(id, port, capacity, currentLoad);
-        } catch (Exception e) {
-            logger.error("Exception occurred while creating ship: " + e.getMessage());
-            throw new CustomException("Failed to create ship.", e);
-        }
+        logger.info("Creating ship: id = " + id + ", capacity = " + capacity + ", currentLoad = " + currentLoad);
+        return new Ship(id, port, capacity, currentLoad);
     }
 
     public static Ship createRandomShip(Port port) throws CustomException {
-        int id = generateUniqueId();
+        UUID id = generateUniqueId();
         return createShip(id, port);
     }
 
-    private static int generateUniqueId() {
-        int id = random.nextInt(10000);
-        while (usedIds.contains(id)) {
-            id = random.nextInt(10000);
-        }
+    private static UUID generateUniqueId() {
+        UUID id;
+        do {
+            id = UUID.randomUUID();
+        } while (usedIds.contains(id));
         usedIds.add(id);
         return id;
     }

@@ -1,58 +1,56 @@
 package glotov.multithreading.entity;
 
 import java.util.Random;
-import java.util.concurrent.Callable;
+import java.util.UUID;
 import java.util.concurrent.TimeUnit;
 import glotov.multithreading.exception.CustomException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-public class Ship implements Callable<Void> {
+public class Ship implements Runnable {
     private static final Logger logger = LogManager.getLogger(Ship.class);
 
-    private final int id;
+    private final UUID id;
     private final Port port;
     private final int capacity;
-    private int currentLoad;
+    private int currentDownload;
     private final Random random;
 
-    public Ship(int id, Port port, int capacity, int currentLoad) {
+    public Ship(UUID id, Port port, int capacity, int currentDownload) {
         this.id = id;
         this.port = port;
         this.capacity = capacity;
-        this.currentLoad = currentLoad;
+        this.currentDownload = currentDownload;
         this.random = new Random();
-    }
-
-    public int getId() {
-        return id;
     }
 
     // Perform loading of containers
     private void load() throws CustomException {
-        int maxLoad = capacity - currentLoad;
+        int maxLoad = capacity - currentDownload;
         int loadCount = random.nextInt(maxLoad + 1);
-        int shipId = getId();
-        port.unloadContainers(loadCount, shipId);  // Unload containers from the port
-        currentLoad += loadCount;  // Update the current load of the ship
+        port.unloadContainers(loadCount, id);  // Unload containers from the port
+        currentDownload += loadCount;  // Update the current load of the ship
     }
 
     // Perform unloading of containers
     private void unload() throws CustomException {
-        int unloadCount = random.nextInt(currentLoad + 1);
-        int shipId = getId();
-        port.loadContainers(unloadCount, shipId);  // Load containers onto the port
-        currentLoad -= unloadCount;  // Update the current load of the ship
+        int unloadCount = random.nextInt(currentDownload + 1);
+        port.loadContainers(unloadCount, id);  // Load containers onto the port
+        currentDownload -= unloadCount;  // Update the current load of the ship
     }
 
     @Override
-    public Void call() throws CustomException {
+    public void run() {
         try {
-            Dock dock = port.acquireDock();  // Acquire a dock from the port
-            logger.info("Ship " + id + " docked at the port.");
-            // Perform loading/unloading operations based on random activity
+            port.acquireDock(id); // Acquire a dock from the port
+            Dock dock = port.getAssignedDock(id);
+            if (dock != null) {
+                int dockId = dock.getId(); // Getting the assigned dock ID
+                logger.info("Ship " + id + " assigned to Dock " + dockId);
+            }
+
+            // Perform loading/unloading operations depending on random activity
             ShipActivity activity = ShipActivity.getRandomActivity();
-            logger.info("Get activity for ship " + id + ": " + activity);
             switch (activity) {
                 case UNLOAD -> unload();  // Unload containers from the ship
                 case LOAD -> load();  // Load containers onto the ship
@@ -61,14 +59,17 @@ public class Ship implements Callable<Void> {
                     load();  // Load containers onto the ship
                 }
             }
+            logger.info("Get activity for ship " + id + ": " + activity);
+
             TimeUnit.MILLISECONDS.sleep(random.nextInt(1000));  // Simulate work on the dock
-            port.releaseDock(dock);  // Release the dock back to the port
-            logger.info("Ship " + id + "left the port. Current load: " + currentLoad);
-        } catch (InterruptedException e) {
-            logger.error("Ship " + id + "encountered an InterruptedException: " + e.getMessage());
-            throw new CustomException(e);  // Wrap and propagate the exception as CustomException
+
+            port.releaseDock(id); // Release the dock and free it up for other ships
+            logger.info("Ship " + id + " left the port. Current load: " + currentDownload);
+
+        } catch (CustomException | InterruptedException e) {
+            System.err.println("Exception occurred for Ship " + id + ": " + e.getMessage());
+            Thread.currentThread().interrupt();
         }
-        return null;
     }
 
     @Override
@@ -76,8 +77,9 @@ public class Ship implements Callable<Void> {
         return "Ship{" +
                 "id=" + id +
                 ", capacity=" + capacity +
-                ", currentLoad=" + currentLoad +
+                ", currentLoad=" + currentDownload +
                 '}';
     }
 }
+
 
